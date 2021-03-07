@@ -1,0 +1,433 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1180px;
+    justify-content: center;
+}
+
+/* ESTRUTURA */
+
+.estruture {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "content content"
+    "how how"
+    "plan plan"
+    "footer footer"
+    ;
+}
+
+/* HEADER */
+
+.header {
+    grid-area: header;
+    background: url(assets/bg-intro.png);
+}
+
+.sub-header {
+    display: grid;
+    justify-content: end;
+    width: 1180px;
+    margin: 0 auto;
+    text-align: end;
+    height: 453px;
+}
+
+.sub-header h1 {
+    font-size: 4.5em;
+    color: #fff;
+}
+
+.menu ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 30px;
+}
+
+.menu li a {
+    font-size: 1.125em;
+    color: #fff;
+}
+
+.menu li:last-child a {
+    padding: 10px 25px;
+    background: #8739F9;
+    border-radius: 5px;
+    transition: 0.5s ease-out;
+}
+
+.menu li:last-child a:hover {
+    background: #C651CD;
+}
+
+/* CONTENT */
+
+.content {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 260px 360px;
+    gap: 20px;
+    grid-template-areas:
+    "what computer"
+    "mouse why"
+    ;
+    margin: 120px auto;
+}
+
+.why {
+    grid-area: why;
+}
+
+.why p {
+    margin-bottom: 52px;
+}
+
+.why a {
+    padding: 20px 40px;
+    background: #8739F9;
+    color: #fff;
+    border-radius: 5px;
+}
+
+h2 {
+    font-size: 2.25em;
+    font-weight: bold;
+}
+
+.what p, .why p {
+    font-size: 1.125em;
+    margin-top: 20px;
+    max-width: 480px;
+}
+
+main span {
+    color: #8739F9;
+}
+
+.what h2::after, .why h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 2px;
+    background: #100F10;
+}
+
+.what {
+    grid-area: what;
+    align-items: center;
+}
+
+.computer {
+    grid-area: computer;
+    justify-self: center;
+}
+
+.mouse {
+    grid-area: mouse;
+    justify-self: center;
+    align-self: start;
+}
+
+/* HOW */
+
+.how {
+    grid-area: how; 
+    height: 100vh;
+    background: linear-gradient(98.87deg, #10100F 0%, #1B1B1B 100%);
+}
+
+.how > div {
+    position: relative;
+}
+
+.how h2 {
+    color: #fff;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.how p {
+    font-size: 1.125em;
+    color: #fff;
+    max-width: 480px;
+    margin-top: 60px;
+}
+
+.how img {
+    justify-self: end;
+    position: absolute;
+    top: 102px;
+    right: 100px;
+}
+
+/* PLAN */
+
+.plan {
+    grid-area: plan;
+    margin-top: 60px;
+}
+
+.plan h2::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background: #8739F9;
+    display: block;
+}
+
+.plans {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-top: 60px;
+}
+
+.plan-item {
+    width: 380px;
+    height: 474px;
+    background: #1B1B1B;
+    text-align: center;
+}
+
+.plan-item h3 {
+    margin: 100px 0 30px 0;
+    font-size: 2.25em;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+}
+
+.plan-item span {
+    display: block;
+    font-size: 1.125em;
+    color: #fff;
+}
+
+.promotion {
+    border: 10px solid #8739F9;
+    box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.25), 0px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.promotion::before {
+    content: 'BEST VALUE';
+    display: inline-block;
+    width: 177px;
+    height: 47px;
+    background: #8739F9;
+    border-radius: 0 0 5px 5px;
+    font-size: 1.125em;
+    color:#fff;
+    font-weight: bold;
+    align-self: center;
+    padding: 15px 0 0 0;
+}
+
+.plan-item span + span {
+    margin-top: 20px;
+}
+
+.btn  {
+    margin-top: 30px;
+}
+
+.plan-item a {
+    padding: 10px 55px;
+    background: #C651CD;
+    border-radius: 5px;
+    color: #fff;
+    transition: 0.5s ease-out;
+}
+
+.plan-item a:hover {
+    background: #8739F9;
+}
+
+.footer {
+    grid-area: footer;
+    background: #141314;
+    color: #fff;
+    padding: 30px 0;
+    margin-top: 120px;
+}
+
+@media (max-width: 738px) {
+    .estruture {
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "content"
+        "how"
+        "plan"
+        "footer"
+        ;
+    }
+    .content {
+        grid-area: content;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 0px;
+        grid-template-areas:
+        "what"
+        "computer"
+        "why"        
+        "mouse"
+        ;
+        margin: 60px auto;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .content p {
+        max-width: 300px;
+    }
+
+    .what h2, .why h2 {
+        margin-top: 30px;
+    }
+    .what h2::after, .why h2::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 2px;
+        background: #100F10;
+        margin: 0 auto;
+    }
+    
+
+    html body p {
+        max-width: 300px;
+    }
+
+    .container {
+        grid-template-columns: 300px;
+    }
+
+    .plans {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0px;
+        margin-top: 30px;
+    }
+
+    .how img {
+        display: none;
+    }
+
+    .plan {
+        grid-area: plan;
+        margin-top: 30px;
+    }
+
+    .header {
+        background-position-x: -200px;
+    }
+    
+    .sub-header {
+        justify-content: start;
+        width: 300px;
+    }
+    
+    .sub-header h1 {
+        font-size: 2.625em;
+        color: #fff;
+    }
+    
+    .menu ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 30px;
+    }
+    
+    .menu li a {
+        font-size: 1.125em;
+        color: #fff;
+    }
+    
+    .menu li:last-child a {
+        padding: 10px 25px;
+        background: #8739F9;
+        border-radius: 5px;
+        transition: 0.5s ease-out;
+    }
+    
+    .menu li:last-child a:hover {
+        background: #C651CD;
+    }
+
+    .computer {
+        display: none;
+    }
+
+    .what, .why {
+        justify-content: center;
+    }
+
+    .mouse {
+        display: none;
+    }
+
+    .plan-item {
+        width: 300px;
+        height: 350px;
+        background: #1B1B1B;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .promotion {
+        border: 2px solid #8739F9;
+        box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.25), 0px 10px 10px rgba(0, 0, 0, 0.25);
+    }
+    
+    .promotion::before {
+        content: 'BEST VALUE';
+        display: inline-block;
+        width: 100px;
+        height: 47px;
+        background: #8739F9;
+        border-radius: 0 0 5px 5px;
+        font-size: 1.125em;
+        color:#fff;
+        font-weight: bold;
+        align-self: center;
+        padding: 3px 0 10px 0;
+    }
+
+    .plan-item span + span {
+        margin-top: 10px;
+    }
+
+    .plan-item h3 {
+        margin: 20px 0 30px 0;
+        font-size: 2.25em;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .how {
+        height: 65vh;
+    }
+
+    .footer {
+        grid-area: footer;
+        background: #141314;
+        color: #fff;
+        padding: 30px 0;
+        margin-top: 30px;
+    }
+}
